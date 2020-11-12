@@ -4,68 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f587a3ad4784543cba7f34d3c035c6f9",
+    "content-hash": "cf1df58b8b2283d328d5012c1842fe57",
     "packages": [
-        {
-            "name": "aura/view",
-            "version": "2.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/auraphp/Aura.View.git",
-                "reference": "58dbc0361c040019be72cf410e693583c469b084"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/auraphp/Aura.View/zipball/58dbc0361c040019be72cf410e693583c469b084",
-                "reference": "58dbc0361c040019be72cf410e693583c469b084",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "aura/di": "~2.0"
-            },
-            "type": "library",
-            "extra": {
-                "aura": {
-                    "type": "library",
-                    "config": {
-                        "common": "Aura\\View\\_Config\\Common"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Aura\\View\\": "src/",
-                    "Aura\\View\\_Config\\": "config/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Aura.View Contributors",
-                    "homepage": "https://github.com/auraphp/Aura.View/contributors"
-                }
-            ],
-            "description": "Provides an implementation of the TemplateView and TwoStepView patterns, with support for helpers and for closures as templates, using PHP itself as the templating language.",
-            "homepage": "https://github.com/auraphp/Aura.View",
-            "keywords": [
-                "Escape",
-                "escaper",
-                "escaping",
-                "template",
-                "template view",
-                "two step view",
-                "two-step view",
-                "twostep view",
-                "view"
-            ],
-            "time": "2017-07-21T05:15:05+00:00"
-        },
         {
             "name": "elevenone/darkmatter",
             "version": "dev-main",

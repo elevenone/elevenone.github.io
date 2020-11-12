@@ -8,7 +8,6 @@ declare(strict_types = 1);
 
 // running under built-in server route static assets and return false
 if (php_sapi_name() == "cli-server") {
-    echo 'built-in server';
     $extensions = array("php", "jpg", "gif", "css", "png", "js", "ico", "svg");
     $path = parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH);
     $ext = pathinfo($path, PATHINFO_EXTENSION);

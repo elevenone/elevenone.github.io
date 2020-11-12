@@ -42,7 +42,7 @@ $payload = [
 
 
 // view stuff
-use elevenone\View\ViewFactory;
+use DarkMatter\View\ViewFactory;
 
 $view_factory = new ViewFactory;
 $view = $view_factory->newInstance();

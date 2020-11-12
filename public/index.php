@@ -3,7 +3,8 @@
  * stardust / a project skeleton for darkmatter
  */
 declare(strict_types = 1);
-
+echo 'ok?';
+exit;
 // date_default_timezone_set('UTC');
 
 // running under built-in server route static assets and return false

@@ -7,8 +7,8 @@
   },
   "require" : {
     "php": "^7.2",
-    "elevenone/darkmatter": "dev-main",
-    "elevenone/view": "dev-main"
+    "darkstar/darkstar": "^1.0",
+    "darkstar/view": "^1.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^8.0",

@@ -4,27 +4,27 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cf1df58b8b2283d328d5012c1842fe57",
+    "content-hash": "7f72bd56434f0e47cf2525081b12cc35",
     "packages": [
         {
-            "name": "elevenone/darkmatter",
-            "version": "dev-main",
+            "name": "darkstar/darkstar",
+            "version": "v1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/elevenone/darkmatter.git",
-                "reference": "d40d242ecb95b4a658b0057ce556a6024a4047c0"
+                "url": "https://github.com/darkstarphp/darkstar.git",
+                "reference": "730c88953d14d88e61da0ff20dac89d6f140f212"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elevenone/darkmatter/zipball/d40d242ecb95b4a658b0057ce556a6024a4047c0",
-                "reference": "d40d242ecb95b4a658b0057ce556a6024a4047c0",
+                "url": "https://api.github.com/repos/darkstarphp/darkstar/zipball/730c88953d14d88e61da0ff20dac89d6f140f212",
+                "reference": "730c88953d14d88e61da0ff20dac89d6f140f212",
                 "shasum": ""
             },
             "require": {
-                "elevenone/http": "~1.0.0",
-                "elevenone/logger": "~1.0.0",
-                "elevenone/payload": "~1.0.0",
-                "elevenone/router": "~1.0.0",
+                "darkstar/http": "~1.0.0",
+                "darkstar/log": "~1.0.0",
+                "darkstar/payload": "~1.0.0",
+                "darkstar/router": "~1.0.0",
                 "ext-json": "*",
                 "php": "^7.2"
             },
@@ -34,7 +34,7 @@
             "type": "library",
             "autoload": {
                 "psr-4": {
-                    "DarkMatter\\": "src/"
+                    "DarkStar\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -47,15 +47,367 @@
                     "email": "hello@elevenone.space"
                 }
             ],
-            "description": "HTTP kernel for darkmatter",
+            "description": "Glue for DarkStar",
             "homepage": "https://elevenone.space",
             "keywords": [
-                "darkmatter",
+                "action-domain-responder",
+                "adr",
+                "darkstar",
+                "elevenone",
+                "php"
+            ],
+            "time": "2020-11-13T06:54:50+00:00"
+        },
+        {
+            "name": "darkstar/http",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/darkstarphp/darkstar.http.git",
+                "reference": "cf52dbaf6f6a95063ee9cf8e37a9824560f929e6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/darkstarphp/darkstar.http/zipball/cf52dbaf6f6a95063ee9cf8e37a9824560f929e6",
+                "reference": "cf52dbaf6f6a95063ee9cf8e37a9824560f929e6",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DarkStar\\Http\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Zsolt Sándor",
+                    "email": "hello@elevenone.space"
+                }
+            ],
+            "description": "HTTP kernel for DarkStar",
+            "homepage": "https://elevenone.space",
+            "keywords": [
+                "darkstar",
                 "elevenone",
                 "http",
                 "php"
             ],
-            "time": "2020-10-30T20:03:22+00:00"
+            "time": "2020-11-13T05:33:51+00:00"
+        },
+        {
+            "name": "darkstar/log",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/darkstarphp/darkstar.log.git",
+                "reference": "cd28a2f0f88f3aaa416f2b5fe92a7d1d14dee7e4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/darkstarphp/darkstar.log/zipball/cd28a2f0f88f3aaa416f2b5fe92a7d1d14dee7e4",
+                "reference": "cd28a2f0f88f3aaa416f2b5fe92a7d1d14dee7e4",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DarkStar\\Logger\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Zsolt Sándor",
+                    "email": "hello@elevenone.space"
+                }
+            ],
+            "description": "Logger for DarkStar",
+            "homepage": "https://elevenone.space",
+            "keywords": [
+                "darkstar",
+                "elevenone",
+                "file-logger",
+                "logger",
+                "null-logger",
+                "php",
+                "psr-3"
+            ],
+            "time": "2020-11-12T21:43:01+00:00"
+        },
+        {
+            "name": "darkstar/payload",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/darkstarphp/darkstar.payload.git",
+                "reference": "fd2ecf67c9f99af9e19149ac5dbc7392b9fa3721"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/darkstarphp/darkstar.payload/zipball/fd2ecf67c9f99af9e19149ac5dbc7392b9fa3721",
+                "reference": "fd2ecf67c9f99af9e19149ac5dbc7392b9fa3721",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DarkStar\\Payload\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Zsolt Sándor",
+                    "email": "hello@elevenone.space"
+                }
+            ],
+            "description": "Domain Payload Object for DarkStar",
+            "homepage": "https://elevenone.space",
+            "keywords": [
+                "adr",
+                "darkstar",
+                "domain",
+                "elevenone",
+                "payload",
+                "php"
+            ],
+            "time": "2020-11-12T21:25:57+00:00"
+        },
+        {
+            "name": "darkstar/router",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/darkstarphp/darkstar.router.git",
+                "reference": "a28c0ef0d9a0a6b846970fcf31147ff6bbb7f4cf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/darkstarphp/darkstar.router/zipball/a28c0ef0d9a0a6b846970fcf31147ff6bbb7f4cf",
+                "reference": "a28c0ef0d9a0a6b846970fcf31147ff6bbb7f4cf",
+                "shasum": ""
+            },
+            "require": {
+                "nikic/fast-route": "^1.3",
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^8.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DarkStar\\Router\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Zsolt Sándor",
+                    "email": "hello@elevenone.space"
+                }
+            ],
+            "description": "Router for DarkStar",
+            "homepage": "https://elevenone.space",
+            "keywords": [
+                "darkstar",
+                "elevenone",
+                "php",
+                "router"
+            ],
+            "time": "2020-11-13T06:25:04+00:00"
+        },
+        {
+            "name": "darkstar/view",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/darkstarphp/darkstar.view.git",
+                "reference": "82d11910dfa3b65cefc82e95dbc8f84ec2bc4bb6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/darkstarphp/darkstar.view/zipball/82d11910dfa3b65cefc82e95dbc8f84ec2bc4bb6",
+                "reference": "82d11910dfa3b65cefc82e95dbc8f84ec2bc4bb6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "DarkStar\\View\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Aura.View Contributors",
+                    "homepage": "https://github.com/auraphp/Aura.View/contributors"
+                }
+            ],
+            "description": "Provides an implementation of the TemplateView and TwoStepView patterns, with support for helpers and for closures as templates, using PHP itself as the templating language.",
+            "homepage": "https://github.com/elevenone/View",
+            "keywords": [
+                "Escape",
+                "escaper",
+                "escaping",
+                "template",
+                "template view",
+                "two step view",
+                "two-step view",
+                "twostep view",
+                "view"
+            ],
+            "time": "2020-11-13T07:21:22+00:00"
+        },
+        {
+            "name": "nikic/fast-route",
+            "version": "v1.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nikic/FastRoute.git",
+                "reference": "181d480e08d9476e61381e04a71b34dc0432e812"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nikic/FastRoute/zipball/181d480e08d9476e61381e04a71b34dc0432e812",
+                "reference": "181d480e08d9476e61381e04a71b34dc0432e812",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.8.35|~5.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "FastRoute\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Nikita Popov",
+                    "email": "nikic@php.net"
+                }
+            ],
+            "description": "Fast request router for PHP",
+            "keywords": [
+                "router",
+                "routing"
+            ],
+            "time": "2018-02-13T20:26:39+00:00"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "doctrine/instantiator",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/doctrine/instantiator.git",
+                "reference": "d56bf6102915de5702778fe20f2de3b2fe570b5b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/d56bf6102915de5702778fe20f2de3b2fe570b5b",
+                "reference": "d56bf6102915de5702778fe20f2de3b2fe570b5b",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.1 || ^8.0"
+            },
+            "require-dev": {
+                "doctrine/coding-standard": "^8.0",
+                "ext-pdo": "*",
+                "ext-phar": "*",
+                "phpbench/phpbench": "^0.13 || 1.0.0-alpha2",
+                "phpstan/phpstan": "^0.12",
+                "phpstan/phpstan-phpunit": "^0.12",
+                "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Doctrine\\Instantiator\\": "src/Doctrine/Instantiator/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Marco Pivetta",
+                    "email": "ocramius@gmail.com",
+                    "homepage": "https://ocramius.github.io/"
+                }
+            ],
+            "description": "A small, lightweight utility to instantiate objects in PHP without invoking their constructors",
+            "homepage": "https://www.doctrine-project.org/projects/instantiator.html",
+            "keywords": [
+                "constructor",
+                "instantiate"
+            ],
+            "funding": [
+                {
+                    "url": "https://www.doctrine-project.org/sponsorship.html",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.patreon.com/phpdoctrine",
+                    "type": "patreon"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Finstantiator",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-11-10T18:47:58+00:00"
         },
         {
             "name": "elevenone/http",
@@ -246,167 +598,6 @@
                 "router"
             ],
             "time": "2020-10-23T07:23:37+00:00"
-        },
-        {
-            "name": "elevenone/view",
-            "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/elevenone/view.git",
-                "reference": "6c6f439ee1843e1448919ed826897078d1e08a62"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/elevenone/view/zipball/6c6f439ee1843e1448919ed826897078d1e08a62",
-                "reference": "6c6f439ee1843e1448919ed826897078d1e08a62",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "DarkMatter\\View\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-2-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Aura.View Contributors",
-                    "homepage": "https://github.com/auraphp/Aura.View/contributors"
-                }
-            ],
-            "description": "Provides an implementation of the TemplateView and TwoStepView patterns, with support for helpers and for closures as templates, using PHP itself as the templating language.",
-            "homepage": "https://github.com/elevenone/View",
-            "keywords": [
-                "Escape",
-                "escaper",
-                "escaping",
-                "template",
-                "template view",
-                "two step view",
-                "two-step view",
-                "twostep view",
-                "view"
-            ],
-            "time": "2020-11-12T20:28:31+00:00"
-        },
-        {
-            "name": "nikic/fast-route",
-            "version": "v1.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nikic/FastRoute.git",
-                "reference": "181d480e08d9476e61381e04a71b34dc0432e812"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nikic/FastRoute/zipball/181d480e08d9476e61381e04a71b34dc0432e812",
-                "reference": "181d480e08d9476e61381e04a71b34dc0432e812",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.4.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^4.8.35|~5.7"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "FastRoute\\": "src/"
-                },
-                "files": [
-                    "src/functions.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Nikita Popov",
-                    "email": "nikic@php.net"
-                }
-            ],
-            "description": "Fast request router for PHP",
-            "keywords": [
-                "router",
-                "routing"
-            ],
-            "time": "2018-02-13T20:26:39+00:00"
-        }
-    ],
-    "packages-dev": [
-        {
-            "name": "doctrine/instantiator",
-            "version": "1.4.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/instantiator.git",
-                "reference": "d56bf6102915de5702778fe20f2de3b2fe570b5b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/d56bf6102915de5702778fe20f2de3b2fe570b5b",
-                "reference": "d56bf6102915de5702778fe20f2de3b2fe570b5b",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1 || ^8.0"
-            },
-            "require-dev": {
-                "doctrine/coding-standard": "^8.0",
-                "ext-pdo": "*",
-                "ext-phar": "*",
-                "phpbench/phpbench": "^0.13 || 1.0.0-alpha2",
-                "phpstan/phpstan": "^0.12",
-                "phpstan/phpstan-phpunit": "^0.12",
-                "phpunit/phpunit": "^7.0 || ^8.0 || ^9.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "Doctrine\\Instantiator\\": "src/Doctrine/Instantiator/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Marco Pivetta",
-                    "email": "ocramius@gmail.com",
-                    "homepage": "https://ocramius.github.io/"
-                }
-            ],
-            "description": "A small, lightweight utility to instantiate objects in PHP without invoking their constructors",
-            "homepage": "https://www.doctrine-project.org/projects/instantiator.html",
-            "keywords": [
-                "constructor",
-                "instantiate"
-            ],
-            "funding": [
-                {
-                    "url": "https://www.doctrine-project.org/sponsorship.html",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.patreon.com/phpdoctrine",
-                    "type": "patreon"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/doctrine%2Finstantiator",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2020-11-10T18:47:58+00:00"
         },
         {
             "name": "heroku/heroku-buildpack-php",
@@ -1983,10 +2174,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "elevenone/darkmatter": 20,
-        "elevenone/view": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

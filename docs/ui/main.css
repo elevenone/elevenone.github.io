@@ -1,0 +1,41 @@
+body, html, #header {
+    width: 100%;
+    min-height: 100%;
+    background-color: #3B2F63;
+    background-image: radial-gradient(circle at 50% top, rgba(84, 90, 182, 0.6) 0%, rgba(84, 90, 182, 0) 75%), radial-gradient(circle at right top, #794aa2 0%, rgba(121, 74, 162, 0) 57%);
+    background-repeat: no-repeat;
+    background-size: 100% 120%;
+    color: #c7b8d8;
+    position: fixed;
+
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+header {
+    display: flex;
+}
+
+ul {
+    display: flex;
+}
+
+a {
+    margin: 40px;
+    color: antiquewhite;
+}
+
+section {
+    padding: 10vmin;
+}
+
+canvas {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: fixed;
+    z-index:12;
+}

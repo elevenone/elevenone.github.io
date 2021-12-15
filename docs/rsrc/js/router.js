@@ -79,9 +79,9 @@ class Router {
         // if route is not defined as a constant then display an error page
         let result = this.routeHash.includes(test) ? test : null;
         if (!this.routeHash.includes(test)) {
-            // this._triggerRouteChange('/404', url)
+            this._triggerRouteChange('/404', url);
             // window.location.assign(test)
-            window.location.href = test;
+            // window.location.href = test
             // return test
             ///// old
             // old defer(() => this._tryNav('404'))

@@ -42,7 +42,7 @@ const router = new Router({
             if (htmlfile == '/404.html') {
                 console.log('__________404')
                 reject('response ' + htmlfile + ' not found')
-                // window.location.assign('a')
+                window.location.assign('a')
             }
 
             if (response.status == 200) {
@@ -53,6 +53,8 @@ const router = new Router({
                 reject('response ' + htmlfile + ' not found')
             }
         }).then(html => {
+            // console.debug(html)
+            element.innerHTML = html
             resolve(html)
         })
     })

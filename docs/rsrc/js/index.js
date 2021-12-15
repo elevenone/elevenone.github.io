@@ -43,7 +43,9 @@ const router = new Router({
         // let myheaders = myrequest.headers
         window.location.href = '/nonexistentpage.html';
         // return
-    }
+    } else {
+
+    ///////////
     try {
         const response = await fetch(htmlfile)
             .then(function (result) {
@@ -93,6 +95,10 @@ const router = new Router({
         element.innerHTML = e;
         throw e;
     }
+    ///////////
+    }
+
+
 });
 /**
  *

@@ -36,7 +36,8 @@ const router = new Router({
             if (htmlfile == '/404.html') {
                 console.log('__________404');
                 reject('response ' + htmlfile + ' not found');
-                window.location.replace('a');
+                window.location.assign('a');
+                return null;
             }
             if (response.status == 200) {
                 console.log('__________200');

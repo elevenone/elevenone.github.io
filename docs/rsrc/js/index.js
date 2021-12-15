@@ -31,6 +31,25 @@ const router = new Router({
 }).listen().on("route", async (e) => {
     const element = document.querySelector("section");
     const htmlfile = "/" + e.detail.route + ".html";
+    return new Promise((resolve, reject) => {
+        fetch(htmlfile).then(function (response) {
+            if (htmlfile == '/404.html') {
+                console.log('__________404');
+                reject('response ' + htmlfile + ' not found');
+                // window.location.assign('a')
+            }
+            if (response.status == 200) {
+                console.log('__________200');
+                return response.text();
+            }
+            else {
+                console.log('__________404');
+                reject('response ' + htmlfile + ' not found');
+            }
+        }).then(html => {
+            resolve(html);
+        });
+    });
     document.title = e.detail.route;
     console.log('!!!!!!!!!!!!');
     if (typeof e.detail.route === 'undefined' || e.detail.route === null) {
@@ -57,9 +76,11 @@ const router = new Router({
     console.log('route: ' + e.detail.route, ' url: ' + e.detail.url);
     console.log('htmlfile: ' + htmlfile);
     if (htmlfile == '/404.html') {
-        // let myrequest = new Request('./404.html')
-        // let myheaders = myrequest.headers
-        window.location.href = '/nonexistentpage.html';
+        let myrequest = new Request('./404.html');
+        let myheaders = myrequest.headers;
+        myheaders.set('http', '404 Not Found');
+        myrequest.redirect;
+        // window.location.reload()
         // return
     }
     try {

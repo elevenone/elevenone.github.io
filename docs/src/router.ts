@@ -95,8 +95,10 @@ class Router {
         let result = this.routeHash.includes(test) ? test : null
 
         if (!this.routeHash.includes(test)) {
-            this._triggerRouteChange('/404', url)
-            return test
+            // this._triggerRouteChange('/404', url)
+            // window.location.assign(test)
+            window.location.href = test
+            // return test
             ///// old
             // old defer(() => this._tryNav('404'))
             // old this.setRoute('404');

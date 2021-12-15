@@ -30,6 +30,17 @@ class Router {
         if (!this.routeHash.includes("/")) {
             throw TypeError("No home route found");
         }
+        if (!this._findRoute(document.location.pathname)) {
+            console.log('!!!!!!!!!!!!');
+            console.log('!!!!!!!!!!!!');
+            console.log('!!!!!!!!!!!!');
+            console.log('!!!!!!!!!!!!');
+            console.log('!!!!!!!!!!!!');
+            console.log('!!!!!!!!!!!!');
+            console.log('route not found');
+            return this;
+        }
+        // if ( this.isHashRouter && this._findRoute(document.location.pathname) ) {
         if (this.isHashRouter) {
             window.addEventListener('hashchange', this._hashChanged.bind(this));
             if (this._findRoute(document.location.pathname)) {
@@ -69,9 +80,10 @@ class Router {
         let result = this.routeHash.includes(test) ? test : null;
         if (!this.routeHash.includes(test)) {
             this._triggerRouteChange('/404', url);
-            // defer(() => this._tryNav('404'))
-            // this.setRoute('404');
-            return null;
+            return test;
+            ///// old
+            // old defer(() => this._tryNav('404'))
+            // old this.setRoute('404');
         }
         return result;
     }

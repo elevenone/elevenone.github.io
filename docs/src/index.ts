@@ -29,18 +29,46 @@ const router = new Router({
         "/":         "home",
         "/about":    "about",
         "/products": "products",
-        "/zorro":    "zorro",
-        // error page
         "/404":      "404"
     }
 }).listen().on("route", async e => {
 
-    // if(typeof e.detail.route  === 'undefined' || e.detail.route === null ) {
-    //     window.location.href = "404.html";
-    // }
-
     const element = document.querySelector("section")
     const htmlfile = "/" + e.detail.route + ".html"
+
+    document.title = e.detail.route
+
+    console.log('!!!!!!!!!!!!')
+
+    if(typeof e.detail.route  === 'undefined' || e.detail.route === null ) {
+        console.error('OOOOOOOO')
+    }
+
+    console.debug(router)
+    console.log(router.routeHash)
+    console.log('!!!!!!!!!!!!')
+
+    
+    // check if e.detail.route is in router.routeHash
+    if( router.routeHash.includes('/' + e.detail.route) ) {
+        console.log('kkkkkkkkk')
+        console.log('e.detail.route   = ' + e.detail.route)
+        console.log('router.routeHash = ' + router.routeHash)
+        console.log(router.routeHash.includes('/' + e.detail.route))
+        console.log('kkkkkkkkk')
+    }
+
+    if( !router.routeHash.includes('/' + e.detail.route) ) {
+        console.log('kkkkkkkkk')
+        console.log('e.detail.route   = ' + e.detail.route)
+        console.log('router.routeHash = ' + router.routeHash)
+        console.log(router.routeHash.includes('/' + e.detail.route))
+        console.log('kkkkkkkkk')
+    }
+
+
+
+
 
     console.log('route: ' + e.detail.route, ' url: ' + e.detail.url)
     console.log('htmlfile: ' + htmlfile)

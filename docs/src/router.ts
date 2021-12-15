@@ -40,23 +40,29 @@ class Router {
             throw TypeError("No home route found")
         }
 
-        if (this.isHashRouter) {
+        if (!this._findRoute(document.location.pathname)) {
+            console.log('!!!!!!!!!!!!')
+            console.log('!!!!!!!!!!!!')
+            console.log('!!!!!!!!!!!!')
+            console.log('!!!!!!!!!!!!')
+            console.log('!!!!!!!!!!!!')
+            console.log('!!!!!!!!!!!!')
+            console.log('route not found')
+            return this
+        }
+        // if ( this.isHashRouter && this._findRoute(document.location.pathname) ) {
+        if ( this.isHashRouter ) {
             window.addEventListener('hashchange', this._hashChanged.bind(this))
-
             if (this._findRoute(document.location.pathname)) {
                 defer(() => this._tryNav(document.location.hash.substring(1)))
             }
-
         } else {
             let href = document.location.origin
-
             if (this._findRoute(document.location.pathname)) {
                 href += document.location.pathname
             }
-
             document.addEventListener("click", this._onNavClick.bind(this))
             window.addEventListener("popstate", this._triggerPopState.bind(this))
-
             defer(() => this._tryNav(href))
         }
         return this
@@ -90,9 +96,10 @@ class Router {
 
         if (!this.routeHash.includes(test)) {
             this._triggerRouteChange('/404', url)
-            // defer(() => this._tryNav('404'))
-            // this.setRoute('404');
-            return null
+            return test
+            ///// old
+            // old defer(() => this._tryNav('404'))
+            // old this.setRoute('404');
         } 
 
         return result

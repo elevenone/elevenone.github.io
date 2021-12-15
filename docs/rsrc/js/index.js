@@ -38,17 +38,12 @@ const router = new Router({
     const htmlfile = "/" + e.detail.route + ".html";
     console.log('route: ' + e.detail.route, ' url: ' + e.detail.url);
     console.log('htmlfile: ' + htmlfile);
-    // return new Promise<string>((resolve, reject) => {
-    //     fetch(url).then(function (partial) {
-    //         if (partial.status == 200) {
-    //             return partial.text()
-    //         } else {
-    //             reject('Partial ' + url + ' not found')
-    //         }
-    //     }).then(html => {
-    //         resolve(html)
-    //     })
-    // })
+    if (htmlfile == '/404.html') {
+        // let myrequest = new Request('./404.html')
+        // let myheaders = myrequest.headers
+        window.location.href = '/nonexistentpage.html';
+        // return
+    }
     try {
         const response = await fetch(htmlfile)
             .then(function (result) {
@@ -58,8 +53,6 @@ const router = new Router({
             console.debug(result.ok);
             console.debug(result.statusText);
             console.debug(result.headers);
-            let testheader = new Headers();
-            testheader.set('404', 'Not Found');
             return result;
         });
         // .then(function(html) {
@@ -72,7 +65,8 @@ const router = new Router({
         console.debug('___response___status___text === ' + response.statusText);
         if (!response.ok) {
             console.log('___response___status___text === ' + response.statusText);
-            window.location.href = '404.html';
+            window.location.href = '/nonexistentpage.html';
+            // window.location.href = '404.html'
         }
         if (response.ok) {
             element.innerHTML = text;
@@ -93,22 +87,12 @@ const router = new Router({
         else {
             throw new Error('response error');
         }
-        // console.log(text)
     }
     catch (e) {
         // console.log(' try catch error == ' + e)
         element.innerHTML = e;
         throw e;
     }
-    // if(response.ok) {
-    //     console.log('response OK')
-    //     console.log('response == ' + response.text())
-    // }
-    // if(!response.ok) {
-    //     console.log('response NOT OK')
-    //     console.log('response == ' + response)
-    // }
-    // element.innerHTML = response.text()
 });
 /**
  *

@@ -1,9 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>http://www.example.com/foo.html</loc>
-    <lastmod>2018-06-04</lastmod>
-  </url>
-</urlset>
-
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 <!-- https://developers.google.com/search/docs/advanced/sitemaps/build-sitemap -->
+
+<url>
+  <loc>https://elevenone.github.io/</loc>
+  <lastmod>2021-12-16T08:46:54+00:00</lastmod>
+</url>
+
+<url>
+  <loc>http://127.0.0.1:5501/#products</loc>
+  <lastmod>2021-12-16T08:46:54+00:00</lastmod>
+</url>
+
+<url>
+  <loc>http://127.0.0.1:5501/#about</loc>
+  <lastmod>2021-12-16T08:46:54+00:00</lastmod>
+</url>
+
+</urlset>

@@ -39,17 +39,26 @@ const router = new Router({
             fetch( file )
             .then(function (response) {
 
-                // if (e.detail.route == '404') {
-                //     console.log('__________404 SOFT')
-                //     reject('response ' + htmlfile + ' not found')
-                //     window.location.assign('./error.html')
-                //     // return null
-                // }
+                // if soft 404 error page then insert meta for robots
+                if (e.detail.route == '404') {
+                    console.log('__________404 SOFT')
+                    // const metaRobots = document.createElement('meta');
+                    // metaRobots.name = 'robots';
+                    // metaRobots.content = 'noindex';
+                    // document.head.appendChild(metaRobots);
+                    window.location.replace('./404.html')
+                }
 
-                //
+                // promise response 404
                 // if (response.status == 404) {
                 //     console.log('__________404/PROMISE')
                 //     // window.location.assign('./404.html')
+                //         // this product does not exist, so this is an error page.
+                //         // Note: This example assumes there is no other meta robots tag present in the HTML.
+                //         const metaRobots = document.createElement('meta');
+                //         metaRobots.name = 'robots';
+                //         metaRobots.content = 'noindex';
+                //         document.head.appendChild(metaRobots);
                 //     return response.text()
                 //     // reject( response )
                 // }

@@ -1,13 +1,13 @@
 /**
- * 
  * startup
- * 
  */
 import PromiseDom from "./promiseDom.js"
 import Router from "./router.js"
 import FetchPartial from "./fetchPartial.js"
 
-// check if dom is ready
+/**
+ * domready
+ */
 let dom: any = new PromiseDom
 dom.ready.then(__start())
 
@@ -19,9 +19,7 @@ function __start(): void {
 }
 
 /**
- *
  * routing
- * 
  */
 const router = new Router({
     type: "hash",
@@ -34,34 +32,54 @@ const router = new Router({
 }).listen().on("route", async e => {
 
     const element = document.querySelector("section")
-    const htmlfile = "/" + e.detail.route + ".html"
+    const file = "/" + e.detail.route + ".html"
 
-    return new Promise<string>((resolve, reject) => {
-        fetch(htmlfile).then(function (response) {
+    try {
+        return new Promise<string>((resolve, reject) => {
+            fetch( file )
+            .then(function (response) {
 
-            if (htmlfile == '/404.html') {
-                console.log('__________404')
-                reject('response ' + htmlfile + ' not found')
+                // if (e.detail.route == '404') {
+                //     console.log('__________404 SOFT')
+                //     reject('response ' + htmlfile + ' not found')
+                //     window.location.assign('./error.html')
+                //     // return null
+                // }
 
-                window.location.assign('a')
-                return null
-            }
+                //
+                // if (response.status == 404) {
+                //     console.log('__________404/PROMISE')
+                //     // window.location.assign('./404.html')
+                //     return response.text()
+                //     // reject( response )
+                // }
 
-            if (response.status == 200) {
-                console.log('__________200')
-                return response.text()
-            } else {
-                console.log('__________404')
-                reject('response ' + htmlfile + ' not found')
-            }
-        }).then(html => {
-            // console.debug(html)
-            element.innerHTML = html
-            resolve(html)
+                if (response.status == 200) {
+                    console.log('__________200')
+                    return response.text()
+                } else {
+                    console.log('__________404')
+                    reject( response )
+                    // reject('response ' + htmlfile + ' not found')
+                }
+            })
+            .then(html => {
+                // console.debug(html)
+                element.innerHTML = html
+                resolve(html)
+            })
+            .catch(function(error){
+                console.log(error)
+            })
         })
-    })
+    } catch (error) {
+        console.error(error)
+    }
 
+    
+///////////
 
+/*
 
 
     document.title = e.detail.route
@@ -167,6 +185,11 @@ const router = new Router({
         throw e
     }
 
+*/
+
+
+
+
 })
 
 /**
@@ -186,3 +209,9 @@ function includePartials(): void {
 // }
 
 // include()
+
+
+
+window.addEventListener("unhandledrejection", function (event){
+    console.log(event)
+});

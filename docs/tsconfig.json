@@ -19,6 +19,6 @@
     "src/events.ts",
     "src/router.ts",
     "src/index.ts",
-    "src/utils.ts"
+    "src/utils/throttle.ts"
   ],
 }

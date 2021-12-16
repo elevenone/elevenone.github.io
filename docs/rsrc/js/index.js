@@ -19,7 +19,7 @@ function __start() {
  * routing
  */
 const router = new Router({
-    type: "hash",
+    type: "history",
     routes: {
         "/": "home",
         "/about": "about",

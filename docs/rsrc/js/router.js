@@ -138,7 +138,8 @@ class Router {
         }
         /// 404 error handling
         let href = this.isHashRouter ? '#' + path : document.location.origin + path;
-        history.replaceState(null, null, href.substring(1));
+        // history.replaceState(null, null, href.substring(1))
+        history.replaceState(null, '', href.substring(1));
         this._tryNav(href);
     }
     get isHashRouter() {
@@ -147,3 +148,4 @@ class Router {
     }
 }
 export default Router;
+//# sourceMappingURL=router.js.map

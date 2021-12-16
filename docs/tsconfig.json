@@ -1,7 +1,10 @@
 {
   "compileOnSave": true,
   "compilerOptions": {
-    "sourceMap": false,
+    "strict": false,
+    "alwaysStrict": false,
+    "newLine": "LF",
+    "sourceMap": true,
     "declaration": false,
     "importHelpers": false,
     "target": "es2018",
@@ -19,6 +22,6 @@
     "src/events.ts",
     "src/router.ts",
     "src/index.ts",
-    "src/utils/throttle.ts"
+    "src/simplex-noise.ts"
   ],
 }

@@ -33,3 +33,4 @@ class PromiseDom {
     }
 }
 export default PromiseDom;
+//# sourceMappingURL=promiseDom.js.map

@@ -139,7 +139,7 @@ class Router {
     }
 
 
-    _createUrl(href): URL {
+    _createUrl(href: string): URL {
         console.log('_42  / Router / _createUrl')
         if (this.isHashRouter && href.startsWith("#")) { // was "#"
             href = href.substring(1)
@@ -162,7 +162,7 @@ class Router {
      * Makes the router navigate to the given route
      * @param {String} path 
      */
-    setRoute(path) {
+    setRoute(path: string) {
         console.log('_42  / Router / setRoute')
         if (!this._findRoute(path)) {
             throw TypeError("Invalid route")
@@ -170,8 +170,8 @@ class Router {
         
         /// 404 error handling
         let href = this.isHashRouter ? '#' + path : document.location.origin + path;
-
-        history.replaceState(null, null, href.substring(1))
+        // history.replaceState(null, null, href.substring(1))
+        history.replaceState(null, '', href.substring(1))
         this._tryNav(href)
     }
 

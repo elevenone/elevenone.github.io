@@ -1,0 +1,35 @@
+{
+  "include": [
+    "./src/**/*"
+  ],
+  "compileOnSave": true,
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "es6",
+
+    // "target": "ES2015",
+    // "module": "es2015",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "./build",
+    "rootDir": "./src",
+    "newLine": "LF",
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "moduleResolution": "node",
+    // "esModuleInterop": true,
+    "target": "es2018",
+    "module": "es6",
+  },
+  "files": [
+    "src/SimplexNoise.ts"
+  ],
+}

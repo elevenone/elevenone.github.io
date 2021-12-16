@@ -96,3 +96,4 @@ class FetchPartial {
     }
 }
 export default FetchPartial;
+//# sourceMappingURL=fetchPartial.js.map
